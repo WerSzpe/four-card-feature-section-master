@@ -1,14 +1,99 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 .container {
     width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+/*upper sth*/
+.upper-text {
+    text-align: center;
+    color: hsl(234, 12%, 34%);
+    margin: 10px 14px 8px 14px;
+}
+.upper-text > h2 {
+    font-weight: 200;
+    font-size: 40px;
+    margin-block-start: 0.83rem;
+    margin-block-end: 0;
+}
+.upper-text > h1 {
+    font-size: 40px;
+
+}
+
+.cards { /*for all cards*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.column-cards {
+    flex-direction: column;
+}
+.card.icon {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+/*single card*/
+.card {
+    box-shadow: 0px 10px  16px rgba(158, 161, 183, 0.205); /*ma być lewo dół*/
+    width: 350px;
+    height: 190px;
+    margin: 5px 20px 25px 5px;
+    padding-left: 25px;
+    padding-top: 17px;
+}
+.card-title {
+    font-weight: 600;
+    font-size: 25px;
+}
+.card-text {
+    font-weight: 200;
+    font-size: 14px;
+}
+
+/*specific cards*/
+#supervisor-card {
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+#builder-card {
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+#karma-card {
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+#calculator-card {
+    border-top: 5px solid hsl(212, 86%, 64%);
 }
 
 
 footer {
     font-size: 11px;
     text-align: center;
-     color: hsl(228, 45%, 44%);
+    width: 100%;
+    color: hsl(228, 45%, 44%);
+    position: fixed;
+    bottom: 0px;
+    background-color:rgba(199, 202, 202, 0.404) ;
+}
+
+@media screen and (max-width: 1230px) {
+    .cards {
+        flex-direction: column;
+    }
+    #calculator-card {
+        margin-bottom: 40px;
+    }
+
 }
