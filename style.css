@@ -40,10 +40,10 @@ body {
 .column-cards {
     flex-direction: column;
 }
-.card.icon {
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.icon {
+    width: 315px;
+    display: flex;
+    justify-content: flex-end;
 }
 /*single card*/
 .card {
